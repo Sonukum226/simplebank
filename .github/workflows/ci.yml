@@ -41,7 +41,9 @@ jobs:
 
     - name: install go migrate
       run: |
-       curl -L https://github.com/golang-migrate/migrate/releases/download/v4.19.1/migrate-4.19.1.zip | tar xvz
+       curl -L https://github.com/golang-migrate/migrate/releases/download/v4.19.1/migrate.darwin-amd64.tar.gz | tar xvz
+       sudo mv migrate /user/bin
+       which migrate
 
     - name: run migration
       run: make migrateup
