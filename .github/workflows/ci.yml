@@ -42,7 +42,7 @@ jobs:
     - name: install go migrate
       run: |
        curl -L https://github.com/golang-migrate/migrate/releases/download/v4.19.1/migrate.darwin-amd64.tar.gz | tar xvz
-       sudo mv migrate /user/bin/migrate
+       sudo mv migrate /usr/bin/migrate
        which migrate
 
     - name: run migration
